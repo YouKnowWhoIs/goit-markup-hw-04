@@ -117,6 +117,21 @@ section {
   color: #404bbf;
 }
 
+.studio-efects {
+  color: #404bbf;
+  position: relative;
+}
+.studio-efects:after {
+  content: "";
+  background-color: #404bbf;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+}
+
 .header-address {
   line-height: 1.5;
   font-style: normal;
@@ -157,9 +172,18 @@ section {
 }
 
 .main-title {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
   background-color: #2e2f42;
   text-align: center;
   padding: 188px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
 }
 
 button {
@@ -222,6 +246,21 @@ button:focus {
   overflow: hidden;
 }
 
+.icon-main-list-div {
+  width: 264px;
+  height: 112px;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  background: #f4f4fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.icon-main-list {
+}
+
 /* === section 3 === */
 .h-main-list-team {
   margin: 0;
@@ -269,8 +308,35 @@ button:focus {
 
 .ul-main-list-team {
   display: flex;
+  flex-direction: row;
   gap: 24px;
+  padding-top: 16px;
 }
+
+.ul-main-list-team-icon {
+  display: flex;
+  padding-top: 8px;
+}
+
+.icon-our-team-li {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  background: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.icon-our-team-li:hover {
+  background-color: #31d0aa;
+}
+
+.icon-our-team-a {
+  fill: white;
+}
+
 /* === section 4 === */
 .h-main-list-portfolio {
   color: #2e2f42;
@@ -303,12 +369,43 @@ button:focus {
   background: #fff;
   width: calc((100% - 48px) / 3);
 }
+.li-main-list-portfolio:hover {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  cursor: pointer;
+}
 
 .main-text-portfolio {
   gap: 8px;
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+}
+
+.main-list-portfolio-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-list-portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  transform: translatey(100%);
+  transition: transform 250ms ease-in-out;
+}
+.main-list-portfolio-image:hover .main-list-portfolio-overlay {
+  transform: translateY(0);
+}
+
+.main-list-portfolio-overlay p {
+  color: #f4f4fd;
+  padding: 40px 32px 0 32px;
+  margin: 0;
 }
 /* ============ main-end ============*/
 
@@ -338,6 +435,44 @@ button:focus {
   color: #f4f4fd;
   line-height: 1.5;
   width: 264px;
+}
+
+.footer-social-media p {
+  color: white;
+  font-weight: 500;
+}
+
+.footer-social-media {
+  padding-left: 120px;
+}
+
+.container-footer {
+  display: flex;
+}
+
+.ul-footer-social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding-top: 16px;
+}
+
+.icon-social-media-li {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  background: #4d5ae5;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  display: flex;
+}
+.icon-social-media-li:hover {
+  background-color: #31d0aa;
+}
+
+.icon-social-media-a {
+  fill: white;
 }
 
 /* ============ footer-end =============*/
