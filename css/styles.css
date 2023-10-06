@@ -481,6 +481,12 @@ button:focus {
 .icon-social-media-li {
   width: 40px;
   height: 40px;
+}
+
+.icon-social-media-a {
+  fill: white;
+  width: 100%;
+  height: 100%;
   border-radius: 0;
   background-color: #4d5ae5;
   align-items: center;
@@ -488,15 +494,10 @@ button:focus {
   border-radius: 50%;
   display: flex;
 }
-.icon-social-media-li:hover {
+.icon-social-media-a:hover {
   background-color: #31d0aa;
 }
-.icon-social-media-li:focus {
+.icon-social-media-a:focus {
   background-color: #31d0aa;
 }
-
-.icon-social-media-a {
-  fill: white;
-}
-
 /* ============ footer-end =============*/
